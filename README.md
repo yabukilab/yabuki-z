@@ -7,7 +7,16 @@
 1. データベースへのアクセス方法を確認する。**データベース名を`$_SERVER['MYSQL_DB']`，ユーザ名を`$_SERVER['MYSQL_USER']`，パスワードを`$_SERVER['MYSQL_PASSWORD']`にする（`htdocs/database_conf.php`を参照）。**
 1. フォルダ`htdocs`を作り，公開するファイルを保存する。このフォルダがドキュメントルートになる。（ここまでで，クローンしたフォルダ内に`mydb.sql`と`htdocs`ができる。）
 1. 以上の変更をGitHubにプッシュする。（公開サーバがGitHubのファイルを自動的に読み取り，データベースを更新する。）
-1. 動作を確認する。（例：http://yabukiz.pm-chiba.tech/showallimages.php ）
+1. 動作を確認する。（本番サーバのURLは別に連絡する。）
+
+## うなくいかないとき
+
+以下を確認する。
+
+* リポジトリのファイル構成（最上位に`mydb.sql`と`htdocs`）
+* `mydb.sql`にデータベースの内容が書かれているか
+* フォルダ`htdocs`に必要なファイルがあるか
+* データベースへの接続方法が正しいか（データベース名：`$_SERVER['MYSQL_DB']`，ユーザ名：`$_SERVER['MYSQL_USER']`，パスワード：`$_SERVER['MYSQL_PASSWORD']`）
 
 ちなみに，ここにあるウェブアプリも一つの教材である。その内容を以下で解説する。
 
