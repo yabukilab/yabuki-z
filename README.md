@@ -4,7 +4,7 @@
 
 1. 自分のチームのGitHubリポジトリ（例：https://github.com/yabukilab/yabuki-z ）をクローンする。
 1. phpMyAdminで「エクスポート」をクリックし，作業用のデータベースをダンプする。その結果できるファイル`mydb.sql`を保存する。
-1. データベースへのアクセス方法を確認する。**データベース名を`$_SERVER['MYSQL_DB']`，ユーザ名を`$_SERVER['MYSQL_USER']`，パスワードを`$_SERVER['MYSQL_PASSWORD']`にする（`htdocs/database_conf.php`を参照）。**
+1. データベースへのアクセス方法を確認する。データベース名を`$_SERVER['MYSQL_DB']`，ユーザ名を`$_SERVER['MYSQL_USER']`，パスワードを`$_SERVER['MYSQL_PASSWORD']`にする（`htdocs/database_conf.php`を参照）。
 1. フォルダ`htdocs`を作り，公開するファイルを保存する。このフォルダがドキュメントルートになる。（ここまでで，クローンしたフォルダ内に`mydb.sql`と`htdocs`ができる。）
 1. 以上の変更をGitHubにプッシュする。（公開サーバがGitHubのファイルを自動的に読み取り，データベースを更新する。）
 1. 動作を確認する。（本番サーバのURLは別に連絡する。）
@@ -45,7 +45,7 @@
 
 フォルダ`C:/xampp/htdocs/sample`を作る（NetBeansで，PHPアプリケーション「sample」を作ってもよい。）
 
-**`C:/xampp/htdocs/sample/index.php`を作成し，http://localhost/sample/ にアクセスする。正しく実行されれば成功。（`index.php`はここにあるとおり。）**
+**`C:/xampp/htdocs/sample/index.php`を作成し，http://localhost/sample/ にアクセスする。正しく実行されれば成功。** （`index.php`の例は`htdocs`にある。）
 
 ## データベースの準備
 
@@ -74,7 +74,7 @@ CREATE TABLE tweets (
 );
 ```
 
-**データベース名・ユーザ名・パスワードは，公開用サーバでは別のものを使うことになる（`database_conf.php`を参照）。**
+**データベース名・ユーザ名・パスワードは，公開用サーバでは別のものを使うことになる（`htdocs/database_conf.php`を参照）。**
 
 ### データベースを操作する基本的なSQL文
 
@@ -115,7 +115,7 @@ INSERT INTO tweets (body) VALUES ('こんばんは');
 
 「データベースの準備」で作成したデータベースとユーザ，パスワードを`database_conf.php`に書いておく。`h.php`を作る。
 
-**`connect.php`を実行し，エラーにならなければ成功。**
+**`connect.php`を実行，つまりhttp://localhost/sample/connect.php にアクセスし，エラーにならなければ成功。**
 
 ## **(261)** データの読み取り
 
