@@ -13,6 +13,8 @@
 
 phpMyAdminでエクスポートする際に，Export methodで「詳細」を選び，追加コマンドの「DROP TABLE / VIEW / PROCEDURE / FUNCTION / EVENT / TRIGGER コマンドを追加する」を有効にする。
 
+補足：`mydb.sql`に直接SQLを書けば，権限の範囲内で何でもできます。
+
 ## うなくいかないとき
 
 以下を確認する。
