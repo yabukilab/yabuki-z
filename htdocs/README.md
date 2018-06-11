@@ -30,7 +30,7 @@
 
 以上の操作は，逆引きレシピの通りにやってもよいが，phpMyAdminのSQLタブで，以下のSQL文でも同様のになる。
 
-```
+```sql
 DROP DATABASE IF EXISTS mydb;
 
 -- (246)
@@ -55,22 +55,22 @@ CREATE TABLE tweets (
 基本的には，以下の4つの道具（CRUDでデータベースを操作する。
 
 **(265)** Create
-```
+```sql
 INSERT INTO テーブル (カラム名[,...]) VALUES (値[,...])
 ```
 
 **(261)** Read
-```
+```sql
 SELECT 取り出す対象 FROM テーブル [WHERE 条件]
 ```
 
 **(267)** Update
-```
+```sql
 UPDATE テーブル SET カラム名=値[,...]
 ```
 
 **(268)** Delete
-```
+```sql
 DELETE FROM テーブル [WHERE 条件]
 ```
 
@@ -78,7 +78,7 @@ DELETE FROM テーブル [WHERE 条件]
 
 **(252)** サンプルデータを作成する。**(253)**，**(254)**，**(255)** も試してみるといい。
 
-```
+```sql
 USE mydb;
 INSERT INTO tweets (body) VALUES ('hello, world');
 INSERT INTO tweets (body) VALUES ('こんにちは');
@@ -174,7 +174,7 @@ http://localhost/sample/item.php?id=1 にアクセスするとID=1のつぶや�
 
 画像本体をとの形式を保存できるように，テーブル仕様を変更する（設計が甘かったということもあるが，作る前に全部決めておくのも大変）。
 
-```
+```sql
 ALTER TABLE tweets ADD image LONGBLOB;
 ALTER TABLE tweets ADD mime VARCHAR(30);
 ```
