@@ -185,7 +185,7 @@ phpMyAdminで，既存のつぶやきを編集して画像を追加してみる�
 
 + GIF: image/gif
 + JPEG: image/jpeg
-+ PNG: image/pnh
++ PNG: image/png
 
 #### 画像の表示実験
 
