@@ -32,3 +32,4 @@ phpMyAdminでエクスポートする際に，Export methodで「詳細」を選
 
 別の教材：[名簿アプリ](https://github.com/taroyabuki/pmpractice)
 
+セキュリティの話：[コード](htdocs/security)（[動かしてみる](http://yabukiz.pm-chiba.tech/security/step1.html)）
