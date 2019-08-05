@@ -22,6 +22,14 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
+-- セキュリティ説明用
+
+create table memos (
+  id int auto_increment primary key,
+  memo varchar(100)
+);
+insert into memos (memo) values ('aaa'), ('bbb'), ('ccc');
+
 --
 -- テーブルの構造 `tweets`
 --

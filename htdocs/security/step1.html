@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Step 1</title>
+  </head>
+  <body>
+    <h1>脆弱な処理</h1>
+    <p>適切なデータがフォームに入力されたとする。</p>
+    <form action="step2a.php" method="GET">
+      <input type="text" name="foo" value="aaa" style="width:30em;"/>
+      <input type="submit" value="Step 2a" />
+    </form>
+    
+    <p>悪意のあるデータがフォームに入力されたとする。</p>
+    <form action="step2a.php" method="GET">
+      <input type="text" name="foo" value="<script>alert('XSS脆弱性！');</script>" style="width:30em;"/>
+      <input type="submit" value="Step 2a" />
+    </form>
+    
+    <h1>安全な処理</h1>
+    <p>適切なデータがフォームに入力されたとする。</p>
+    <form action="step2b.php" method="GET">
+      <input type="text" name="foo" value="aaa" style="width:30em;"/>
+      <input type="submit" value="Step 2b" />
+    </form>
+    
+    <p>悪意のあるデータがフォームに入力されたとする。</p>
+    <form action="step2b.php" method="GET">
+      <input type="text" name="foo" value="<script>alert('XSS脆弱性！');</script>" style="width:30em;"/>
+      <input type="submit" value="Step 2b" />
+    </form>
+  </body>
+</html>
